@@ -1,0 +1,19 @@
+version: '2'
+services:
+  php:
+    container_name: graphiceditor_app
+    volumes:
+      - ./app:/var/www/html
+      - ./conf.d:/etc/nginx/sites-enabled
+    build:
+     context: ./
+     dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html
+    networks:
+      - graphiceditor
+networks:
+  graphiceditor:
+    driver: bridge

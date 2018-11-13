@@ -2,18 +2,16 @@
 
 namespace App\Models;
 
-class Shapes 
+class Shapes extends AbstractShapes
 {
-    const MODEL_NAMESPACE_PREFIX = 'App\Models\Shapes\\';
-
-    public static function factory($type, $dimension)
+    public static function factory($type, $params)
     {
         $model = self::MODEL_NAMESPACE_PREFIX . ucwords(strtolower($type));
 
         if (class_exists($model)) {
-            return new $model($dimension);
+            return new $model($params);
         }
 
-        throw new \Exception('Unrecognize shape');
+        throw new \Exception('Unrecognize shape!');
     }
 }

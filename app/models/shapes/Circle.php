@@ -2,27 +2,27 @@
 
 namespace App\Models\Shapes;
 
-class Circle implements IShape
+/**
+ * @implements IShape
+ */
+class Circle extends AbstractShape implements IShape
 {
-    protected $params = array();
-
     public function __construct($params)
     {
-        $this->params = $params;
+        parent::__construct($params);
     }
 
     public function draw()
     {
-        return 'Drawing circle...';
+        // TODO: draw circle
+
+        return true;
     }
 
     public function getPoints()
     {
-        return 'Points of circle...';
-    }
+        // TODO: get points of circle
 
-    public function getBinary()
-    {
-        return 'Circle as binary...';
+        return [];
     }
 }

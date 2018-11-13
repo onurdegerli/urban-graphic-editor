@@ -2,27 +2,27 @@
 
 namespace App\Models\Shapes;
 
-class Square implements IShape
+/**
+ * @implements IShape
+ */
+class Square extends AbstractShape implements IShape
 {
-    protected $params = array();
-
     public function __construct($params)
     {
-        $this->params = $params;
+        parent::__construct($params);
     }
 
     public function draw()
     {
-        return 'Drawing square...';
+        // TODO: draw square
+
+        return true;
     }
 
     public function getPoints()
     {
-        return 'Points of square...';
-    }
+        // TODO: get points of square
 
-    public function getBinary()
-    {
-        return 'Square as binary...';
+        return [];
     }
 }

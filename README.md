@@ -35,10 +35,6 @@ Web: `http://127.0.0.1/`
 
 ## Troubleshooting
 
-- If your Docker version is not updated, please update the docker-compose.yml version like below.
-
-```version: '2'```
-
 - If you encounter with any dependency problem, please run the command below in `graphiceditor_app` container.
 
 ```rm -rf vendor```

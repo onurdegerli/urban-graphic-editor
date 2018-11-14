@@ -9,7 +9,7 @@
 
 1 - Clone the project from BitBucket.
 
-```git clone https://onurdegerli@bitbucket.org/onurdegerli/urban-graphic-editor.git```
+```git clone https://github.com/onurdegerli/urban-graphic-editor.git```
 
 2 - Change directory to your project home.
 
